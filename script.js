@@ -64,6 +64,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = ' You lost the Game';
       document.querySelector('body').style.backgroundColor = 'red';
       document.querySelector('.guess').value = '';
+      document.querySelector('.reveal').style.display = 'none';
       losesound.play();
     }
   } else if (guessedNumber < randomSecretNumber) {
@@ -85,12 +86,13 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = ' You lost the Game';
       document.querySelector('body').style.backgroundColor = 'red';
       document.querySelector('.guess').value = '';
+      document.querySelector('.reveal').style.display = 'none';
       losesound.play();
     }
   } else {
     document.querySelector('.message').textContent = ' You lost the Game';
     document.querySelector('body').style.backgroundColor = 'red';
-
+     document.querySelector('.reveal').style.display = 'none';
     losesound.play();
   }
 });
