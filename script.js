@@ -112,8 +112,16 @@ document.querySelector('.again').addEventListener('click', function () {
 });
 
 document.querySelector('.reveal').addEventListener('click', function () {
-  document.querySelector('.number').textContent = randomSecretNumber;
-  document.querySelector('.reveal').textContent = 'Minus 2 scores';
-  score -= 2;
-  document.querySelector('.score').textContent = score;
+    if (score >= 2) {
+    document.querySelector('.number').textContent = randomSecretNumber;
+    document.querySelector('.reveal').textContent = 'Minus 2 scores';
+    score -= 2;
+    document.querySelector('.score').textContent = score; 
+}
+
+    else {
+        document.querySelector('.reveal').textContent = 'Not Enough Scores';
+        document.querySelector('.number').textContent = '?'; 
+    }
+ 
 });
