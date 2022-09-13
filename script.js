@@ -20,7 +20,7 @@ const losesound = document.querySelector('.losesound');
 
 //console.log(highScore);
 
-let randomSecretNumber = Math.round(Math.random() * 20 + 1);
+let randomSecretNumber = Math.round(Math.random() * 20);
 
 document.querySelector('.check').addEventListener('click', function () {
   const guessedNumber = Number(document.querySelector('.guess').value);
@@ -51,7 +51,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.result').textContent = `${randomSecretNumber}`;
       score--;
       document.querySelector('.score').textContent = score;
-      randomSecretNumber = Math.round(Math.random() * 20 + 1);
+      randomSecretNumber = Math.round(Math.random() * 20);
       // document.querySelector('.number').textContent = randomSecretNumber;
       document.querySelector('.result').style.display = 'block';
       document.querySelector('body').style.backgroundColor = '#222';
@@ -73,7 +73,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.result').textContent = randomSecretNumber;
       score--;
       document.querySelector('.score').textContent = score;
-      randomSecretNumber = Math.round(Math.random() * 20 + 1);
+      randomSecretNumber = Math.round(Math.random() * 20);
       document.querySelector('.number').textContent = randomSecretNumber;
       document.querySelector('.result').style.display = 'block';
       document.querySelector('body').style.backgroundColor = '#222';
@@ -101,7 +101,7 @@ document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   document.querySelector('.score').textContent = score;
   document.querySelector('.guess').value = '';
-  randomSecretNumber = Math.round(Math.random() * 20 + 1);
+  randomSecretNumber = Math.round(Math.random() * 20);
   //document.querySelector('.number').textContent = randomSecretNumber;
   document.querySelector('.number').textContent = '?';
   document.querySelector('.message').textContent = 'Start guessing...';
