@@ -98,6 +98,10 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector('.again').addEventListener('click', function () {
+  
+  if (score === 0) {
+        document.querySelector('.highscore').textContent = '0'; 
+    }
   score = 20;
   document.querySelector('.score').textContent = score;
   document.querySelector('.guess').value = '';
